@@ -1,3 +1,6 @@
+const yargs = require('yargs');
+const { hideBin } = require('yargs/helpers');
+
 const productsOperations = require('./products');
 
 const invokeAction = async ({ action, id, data }) => {
@@ -35,23 +38,5 @@ const invokeAction = async ({ action, id, data }) => {
   }
 };
 
-// invokeAction({ action: 'getAll' });
-// const id = '48bd1cd8-72ca-42cc-8457-156bb8c30873';
-// invokeAction({ action: 'getById', id });
-
-const newData = {
-  name: 'Iphone',
-  price: 34,
-};
-// invokeAction({ action: 'add', data: newData });
-
-const updateId = 'a1b32917-d9d6-40d0-869d-5cb678c6e849';
-
-const updateData = {
-  name: 'Iphone',
-  price: 36,
-};
-
-// invokeAction({ action: 'updateById', id: updateId, data: updateData });
-
-invokeAction({ action: 'removeById', id: updateId });
+const arr = hideBin(process.argv);
+console.log(arr);
