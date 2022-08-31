@@ -1,7 +1,9 @@
 const fs = require('fs/promises');
+const filePath = require('./filePath');
 
 const getAll = async () => {
-  const products = fs.readFile(`${__dirname}/products.json`);
+  const data = await fs.readFile(filePath);
+  const products = JSON.parse(data);
   return products;
 };
 
