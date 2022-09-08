@@ -1,4 +1,4 @@
-[
+const products = [
   {
     id: 1,
     name: 'Apple',
@@ -10,3 +10,5 @@
     price: 26,
   },
 ];
+
+module.exports = products;
